@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CloudTech — Home</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="navbar glass" role="banner">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">Cloud<span>Tech</span></a>
+
+      <nav class="nav" role="navigation" aria-label="Primary navigation">
+        <ul class="nav-list" id="navList">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="controls">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 id="hero-title" class="hero-title">Empowering the Future of <span class="accent">Cloud Computing</span></h1>
+          <p class="hero-sub">Build · Deploy · Scale — enterprise-grade cloud services and consulting for modern teams.</p>
+
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="services.html">Explore Services</a>
+            <a class="btn btn-ghost" href="#features">Why CloudTech</a>
+          </div>
+
+          <ul class="quick-stats" aria-hidden="true">
+            <li class="stat glass"><strong>99.99%</strong><span>Uptime SLA</span></li>
+            <li class="stat glass"><strong>Multi-Region</strong><span>Global Deployment</span></li>
+            <li class="stat glass"><strong>Scale</strong><span>Autoscale Ready</span></li>
+          </ul>
+        </div>
+
+        <!-- visual column: floating blob + subtle 3D card -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="blob" id="blob1"></div>
+          <div class="visual-card glass floating-3d" id="visualCard">
+            <div class="vc-top">
+              <div class="vc-dot"></div>
+              <div class="vc-dot"></div>
+              <div class="vc-dot"></div>
+            </div>
+            <h4 class="vc-title">Realtime Analytics</h4>
+            <p class="vc-sub">Streaming pipeline • <span>low latency</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section features">
+      <div class="container">
+        <h2 class="section-title">Why teams choose CloudTech</h2>
+        <p class="section-sub">Modern architecture, best practices, and cost-optimized cloud operations.</p>
+
+        <div class="features-grid">
+          <article class="feature card glass" data-anim>
+            <h3>Scalable Architecture</h3>
+            <p>Auto-scaling, microservices-ready, and built for growth without downtime.</p>
+          </article>
+
+          <article class="feature card glass" data-anim>
+            <h3>Security by Design</h3>
+            <p>Zero-trust, automated audits, and continuous compliance checks.</p>
+          </article>
+
+          <article class="feature card glass" data-anim>
+            <h3>Cost Optimization</h3>
+            <p>Right-sized infra, reserved capacity, and custom savings plans.</p>
+          </article>
+
+          <article class="feature card glass" data-anim>
+            <h3>Managed DevOps</h3>
+            <p>CI/CD automation, IaC, and reliable release pipelines to accelerate delivery.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services-teaser">
+      <div class="container grid-2">
+        <div class="glass promo" data-anim>
+          <h3>Cloud Migration</h3>
+          <p>We make migration predictable: discovery, automated migration, and validation.</p>
+          <ul class="feature-list">
+            <li>Discovery & planning</li>
+            <li>Automated migration workflows</li>
+            <li>Post-migration validation</li>
+          </ul>
+          <a class="btn btn-outline" href="services.html">View Detailed Services</a>
+        </div>
+
+        <div class="glass promo" data-anim>
+          <h3>Serverless & Containers</h3>
+          <p>Low-maintenance serverless functions or container orchestration — your choice.</p>
+          <ul class="feature-list">
+            <li>Lambda / Functions</li>
+            <li>Kubernetes & EKS/GKE</li>
+            <li>CI/CD & Canary releases</li>
+          </ul>
+          <a class="btn btn-outline" href="projects.html">See Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects-preview">
+      <div class="container">
+        <h2 class="section-title">Selected projects</h2>
+        <p class="section-sub">Real work — measurable outcomes.</p>
+
+        <div class="projects-grid">
+          <div class="project-card glass" data-anim data-tilt>
+            <h4>Realtime Analytics Pipeline</h4>
+            <p>High-throughput ingestion with streaming microservices and dashboards.</p>
+            <span class="tag">Analytics</span>
+          </div>
+
+          <div class="project-card glass" data-anim data-tilt>
+            <h4>eCommerce Auto-Scaling</h4>
+            <p>Cost-efficient autoscaling architecture to handle seasonal spikes.</p>
+            <span class="tag">eCommerce</span>
+          </div>
+
+          <div class="project-card glass" data-anim data-tilt>
+            <h4>Secure Multi-Region App</h4>
+            <p>Low-latency global deployment with failover and encrypted backups.</p>
+            <span class="tag">SaaS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta">
+      <div class="container glass cta-card" data-anim>
+        <h2>Ready to discuss your cloud strategy?</h2>
+        <p>Contact our team for a free technical assessment and cost estimate.</p>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="contact.html">Request Assessment</a>
+          <a class="btn btn-ghost" href="about.html">Meet the Team</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="brand">CloudTech © <span id="year"></span></div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
